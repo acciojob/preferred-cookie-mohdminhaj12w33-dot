@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+    <meta charset="UTF-8" />
+    <title>Preferred Cookie: Customizable Font</title>
 
+    <style>
+      :root {
+        --fontsize: 16px;
+        --fontcolor: #000000;
+      }
+
+      body {
+        font-size: var(--fontsize);
+        color: var(--fontcolor);
+      }
+    </style>
+  </head>
   <body>
-    <!-- the entire body must be written by student -->
-    <form>
-      <label for="fontsize">Font Size:</label>
-      <input
-        type="number"
-        id="fontsize"
-        name="fontsize"
-        min="8"
-        max="72"
-        value="16"
-      />
-      <br />
-      <label for="fontcolor">Font Color:</label>
-      <input type="color" id="fontcolor" name="fontcolor" value="#000000" />
-      <br />
+
+    <form id="font-form">
+      <label>
+        Font Size:
+        <input
+          type="number"
+          id="fontsize"
+          min="8"
+          max="72"
+          value="16"
+        />
+      </label>
+
+      <br /><br />
+
+      <label>
+        Font Color:
+        <input
+          type="color"
+          id="fontcolor"
+          value="#000000"
+        />
+      </label>
+
+      <br /><br />
+
       <input type="submit" value="Save" />
     </form>
 
-    <script type="text/javascript" src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
